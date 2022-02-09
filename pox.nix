@@ -5,9 +5,9 @@ buildPythonPackage rec {
   version = "0.0.1";
 
   src = fetchFromGitHub {
-    owner = "interlock-network";
+    owner = "noxrepo";
     repo = pname;
-    rev = "v${version}";
+    rev = "5f82461e01f8822bd7336603b361bff4ffbd2380";
     sha256 = "1xdkf99wz9sz8fwc80hl8r0zq4kbn36zs6fsb0s6998pg4ibkb0l";
   };
 
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   meta = with lib; {
     description = "POX is a networking software platform written in Python.";
     homepage = "https://github.com/noxrepo/pox";
-    license = licenses.asl20;
+    license = licenses.mit;
     maintainers = with maintainers; [ jmercouris ];
   };
 
