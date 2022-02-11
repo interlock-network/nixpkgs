@@ -11,7 +11,7 @@ buildPythonPackage rec {
 
   doCheck = false;
 
-  buildInputs = [
+  propagatedBuildInputs = [
     ppft
     multiprocess
     pox
