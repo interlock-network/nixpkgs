@@ -1,14 +1,12 @@
-{ lib, buildPythonPackage, fetchFromGitHub, pytest, pox, dill, multiprocess, ppft }:
+{ lib, buildPythonPackage, fetchurl, pytest, pox, dill, multiprocess, ppft }:
 
 buildPythonPackage rec {
   pname = "pathos";
   version = "pathos-0.2.8";
 
-  src = fetchFromGitHub {
-    owner = "uqfoundation";
-    repo = pname;
-    rev = "${version}";
-    sha256 = "10vssdz7v5v13wyqf4h77g8avs7jk4rp1c3anj6ba5dpdxl4qn7g";
+  src = fetchurl {
+    url = "https://files.pythonhosted.org/packages/66/74/2630ffec903fe3cb712f2c8a538d55422298a31461ff5370e9c6b97a93de/pathos-0.2.8.zip";
+    sha256 = "05bgzh2z87v4jw0fbn5j2w6kdsgx028555m77d16rdks1yljf3qz";
   };
 
   checkInputs = [ pytest ];
